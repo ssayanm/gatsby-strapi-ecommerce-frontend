@@ -1,0 +1,113 @@
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+
+  .section-center {
+    width: 95vw;
+  }
+
+  /*
+=============== 
+Navbar
+===============
+*/
+
+  .navbar {
+    .toggle-btn {
+      font-size: 2rem;
+      background: transparent;
+      border-color: transparent;
+      color: $primary-color;
+      cursor: pointer;
+      transition: $transition;
+      display: block;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+
+  /*
+=============== 
+instagram
+===============
+*/
+  .instag {
+    .instagram-center {
+      .intagram-feed {
+        .instagram-img {
+          width: 20rem;
+          height: 20rem;
+        }
+      }
+    }
+  }
+
+  /*
+=============== 
+Hero
+===============
+*/
+
+  .hero {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+    .hero-center {
+      justify-content: space-evenly;
+      flex-direction: column-reverse;
+      .hero-img {
+        width: 30rem;
+      }
+      .hero-info {
+        width: 100%;
+      }
+    }
+  }
+
+  .slider {
+    height: 25rem !important;
+    width: 100% !important;
+  }
+
+  .services-center {
+    flex-direction: column;
+  }
+
+  .services {
+    .info {
+      margin-bottom: 1rem;
+
+      .para {
+        width: 30rem;
+        padding: 1rem;
+
+        p {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
