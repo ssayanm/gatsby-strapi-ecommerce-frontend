@@ -22,15 +22,15 @@ const Hero = () => {
           <div>
             <div className="underline" />
             <h3>Welcome to</h3>
-            <h1>Xtreme Auto Care</h1>
+            <h1>Sayan's store</h1>
             <h4>
-              Auto Detailing Service
+              One stop solution for all
               <br />
-              Premium Mobile Car Wash in Cayman Islands
+              Premium Clothing Brands
             </h4>
             <div className="phone">
               <a href="tel:13455250403">
-                <FiPhoneCall className="phone-icon" /> Call (345) 525-0403
+                <FiPhoneCall className="phone-icon" /> Call (91) 111-222-333
               </a>
             </div>
             <Link to="/contact" className="btn-primary">
