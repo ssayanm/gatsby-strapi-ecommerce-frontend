@@ -10,7 +10,7 @@ const CartIconComponent = () => {
 
   return (
     <div className="cart-icon">
-      <img src={publicURL} />
+      <img src={publicURL} alt="logoicon" />
     </div>
   )
 }

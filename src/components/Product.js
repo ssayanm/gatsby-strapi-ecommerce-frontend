@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Product = ({ id, title, image, price, slug, desc }) => {
   return (
     <Link to={`/products/${slug}`} key={id} className="shop">
-      <article className="shop">
+      <article>
         <div className="image-box">
           {image && (
             <Image fluid={image.childImageSharp.fluid} className="shop-img" />
@@ -18,7 +18,7 @@ const Product = ({ id, title, image, price, slug, desc }) => {
           <div className="shop-footer">
             <p>${price}</p>
             <button
-              className="snipcart-add-item btn"
+              className="snipcart-add-item btn-primary"
               data-item-id={id}
               data-item-price={price}
               data-item-url={`/products/${slug}`}

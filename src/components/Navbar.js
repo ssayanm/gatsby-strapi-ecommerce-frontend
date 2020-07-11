@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../assets/images/Xtreme.png"
 import { FaAlignRight } from "react-icons/fa"
 import { FcDam } from "react-icons/fc"
 import PageLinks from "../constants/links"
+
 const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="navbar container">
