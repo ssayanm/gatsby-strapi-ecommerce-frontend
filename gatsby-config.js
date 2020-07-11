@@ -52,7 +52,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
 
         // singleTypes: [`pricelist`],
-        contentTypes: [`sliders`, `pricelists`],
+        contentTypes: [`products`, `sliders`, `pricelists`],
       },
     },
 
