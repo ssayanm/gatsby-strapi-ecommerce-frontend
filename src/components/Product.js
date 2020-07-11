@@ -4,18 +4,18 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 const Product = ({ id, title, image, price, slug, desc }) => {
   return (
-    <Link to={`/products/${slug}`} key={id} className="blog">
-      <article className="blog">
+    <Link to={`/products/${slug}`} key={id} className="shop">
+      <article className="shop">
         <div className="image-box">
           {image && (
             <Image fluid={image.childImageSharp.fluid} className="shop-img" />
           )}
         </div>
 
-        <div className="blog-card">
+        <div className="shop-card">
           <h4>{title}</h4>
           <p>{desc}</p>
-          <div className="blog-footer">
+          <div className="shop-footer">
             <p>${price}</p>
             <button
               className="snipcart-add-item btn"

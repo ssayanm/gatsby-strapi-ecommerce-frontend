@@ -22,7 +22,7 @@ const ShopTemplate = ({ data }) => {
               <ReactMarkdown source={content} />
             </article>
             <button
-              className="snipcart-add-item btn"
+              className="snipcart-add-item btn-primary"
               data-item-id={id}
               data-item-price={price}
               data-item-url="/"

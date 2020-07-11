@@ -6,7 +6,7 @@ export const Products = ({ products, title, showLink }) => {
   return (
     <section className="section">
       <Title title={title} />
-      <div className="section-center blogs-center">
+      <div className="section-center shop-center">
         {products.map(product => {
           return <Product key={product.id} {...product} />
         })}
