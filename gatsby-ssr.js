@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+// import { GlobalProvider } from "./src/context/GlobalState"
+
+// export const wrapRootElement = GlobalProvider

@@ -1,17 +1,17 @@
-import React from "react";
-import Title from "./Title";
-import services from "../constants/services";
-import SocialLinks from "../constants/socialLinks";
-import { graphql, useStaticQuery } from "gatsby";
-import { Link } from "gatsby";
-import Image from "gatsby-image";
+import React from "react"
+import Title from "./Title"
+import services from "../constants/services"
+import SocialLinks from "../constants/socialLinks"
+import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 const Services = () => {
   const {
     file: {
       childImageSharp: { fluid },
     },
-  } = useStaticQuery(query);
+  } = useStaticQuery(query)
   return (
     <section className="container section services">
       <div className="info">
@@ -32,8 +32,8 @@ const Services = () => {
       </div>
       <Title title="our services" />
       <div className="section-center services-center">
-        {services.map((service) => {
-          const { id, icon, title, text, url } = service;
+        {services.map(service => {
+          const { id, icon, title, text, url } = service
           return (
             <Link to={url} key={id} className="service">
               <article>
@@ -42,18 +42,18 @@ const Services = () => {
                 <p>{text}</p>
               </article>
             </Link>
-          );
+          )
         })}
       </div>
 
       <SocialLinks />
     </section>
-  );
-};
+  )
+}
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "xtremeautocarevan.jpeg" }) {
+    file(relativePath: { eq: "van.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -61,6 +61,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Services;
+export default Services
