@@ -1,23 +1,3 @@
-// import React, { useState } from "react"
-
-// export const myContext = React.createContext()
-
-// const Provider = props => {
-//   const [isDark, setTheme] = useState(false)
-
-//   return (
-//     <myContext.Provider
-//       value={{
-//         isDark,
-//         changeTheme: () => setTheme(!isDark),
-//       }}
-//     >
-//       {props.children}
-//     </myContext.Provider>
-//   )
-// }
-
-// export default ({ element }) => <Provider>{element}</Provider>
 import React, { useReducer, createContext } from "react"
 import AppReducer from "./src/context/AppReducer"
 // import axios from "axios";
@@ -60,79 +40,6 @@ export const Provider = ({ children }) => {
       type: "GET_CART_TOTAL",
       payload: item,
     })
-
-  // const clearItemFromCart = (item) => ({
-  //   type: "CLEAR_ITEM_FROM_CART",
-  //   payload: item,
-  // });
-
-  // const getTodos = async () => {
-  //   try {
-  //     const res = await axios.get("/api/v1/todos");
-
-  //     dispatch({
-  //       type: "GET_TODOS",
-  //       payload: res.data.data,
-  //     });
-  //   } catch (err) {
-  //     dispatch({
-  //       type: "TODO_ERROR",
-  //       payload: err.response.data.error,
-  //     });
-  //   }
-  // };
-
-  // const deleteTodo = async (id) => {
-  //   try {
-  //     await axios.delete(`/api/v1/todos/${id}`);
-  //     dispatch({
-  //       type: "DELETE_TODO",
-  //       payload: id,
-  //     });
-  //   } catch (err) {
-  //     dispatch({
-  //       type: "TODO_ERROR",
-  //       payload: err.response.data.error,
-  //     });
-  //   }
-  // };
-
-  // // Toggle Complete
-  // const markComplete = async (id) => {
-  //   try {
-  //     await axios.patch(`/api/v1/todos/${id}`);
-  //     dispatch({
-  //       type: "COMPLETED_TODO",
-  //       payload: id,
-  //     });
-  //   } catch (err) {
-  //     dispatch({
-  //       type: "TODO_ERROR",
-  //       payload: err.response.data.error,
-  //     });
-  //   }
-  // };
-
-  // const addTodo = async (todo) => {
-  //   const config = {
-  //     header: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   };
-  //   try {
-  //     const res = await axios.post("/api/v1/todos", todo, config);
-
-  //     dispatch({
-  //       type: "ADD_TODO",
-  //       payload: res.data.data,
-  //     });
-  //   } catch (err) {
-  //     dispatch({
-  //       type: "TODO_ERROR",
-  //       payload: err.response.data.error,
-  //     });
-  //   }
-  // }
 
   return (
     <GlobalContext.Provider
