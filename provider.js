@@ -1,8 +1,15 @@
 import React, { useReducer, createContext } from "react"
 import AppReducer from "./src/context/AppReducer"
+import { graphql, useStaticQuery } from "gatsby"
 // import axios from "axios";
 // import SHOP_DATA from "./ShopData";
 // import DIRECTORY_DATA from "./DirectoryData";
+
+const {
+  data: {
+    allStrapiProducts: { nodes: products },
+  },
+} = useStaticQuery(query)
 
 //initial State
 const initialState = {
@@ -56,5 +63,27 @@ export const Provider = ({ children }) => {
     </GlobalContext.Provider>
   )
 }
+
+export const query = graphql`
+  {
+    allStrapiProducts {
+      nodes {
+        slug
+        desc
+        price
+        id
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 600, maxHeight: 600) {
+              ...GatsbyImageSharpFluid
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default ({ element }) => <Provider>{element}</Provider>

@@ -753,7 +753,13 @@ Cart & Checkout
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  position: absolute;
+
+  .count {
+    position: absolute;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: $primary-color-1;
+  }
 }
 
 /*

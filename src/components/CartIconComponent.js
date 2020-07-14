@@ -1,16 +1,20 @@
 import React, { useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-// import { GlobalContext } from "../context/GlobalState"
-// import { getCartItemsCount } from "../utils/cartUtils"
+import { GlobalContext } from "../context/GlobalState"
+import { getCartItemsCount } from "../utils/cartUtils"
 
 const CartIconComponent = () => {
   const {
     file: { publicURL },
   } = useStaticQuery(query)
 
+  const { toggleCartHidden, cartItems } = useContext(GlobalContext)
+
   return (
-    <div className="cart-icon">
+    <div className="cart-icon" onClick={toggleCartHidden}>
       <img src={publicURL} alt="logoicon" />
+
+      <span className="count"> {getCartItemsCount(cartItems)}</span>
     </div>
   )
 }
