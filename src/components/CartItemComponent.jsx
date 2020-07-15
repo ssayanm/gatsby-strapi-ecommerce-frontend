@@ -1,13 +1,14 @@
 import React from "react"
+import Image from "gatsby-image"
 
 const CartItemComponent = ({ cartItem }) => {
-  const { name, price, imageUrl, quantity } = cartItem
+  const { title, price, image, quantity } = cartItem
   return (
-    <div className="container section">
-      <img className="" src={imageUrl} alt={name} />
-      <div className="">
-        <span className=""> {name}</span>
-        <span>
+    <div className="cart-item">
+      <Image fluid={image.childImageSharp.fluid} className="cart-img" />
+      <div className="item-details">
+        <span className="name">{title}</span>
+        <span className="price">
           {quantity} x ${price}
         </span>
       </div>
