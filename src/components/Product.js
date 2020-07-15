@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+import { GlobalContext } from "../context/GlobalState"
 
-const Product = ({ id, title, image, price, slug, desc }) => {
+const Product = ({ product }) => {
+  const { addItem } = useContext(GlobalContext)
+  const { id, title, image, price, slug, desc } = product
   return (
     <Link to={`/products/${slug}`} key={id} className="shop">
       <article>
@@ -18,15 +21,7 @@ const Product = ({ id, title, image, price, slug, desc }) => {
           <p>{desc}</p>
           <div className="shop-footer">
             <p>${price}</p>
-            <button
-              className="snipcart-add-item btn-primary"
-              data-item-id={id}
-              data-item-price={price}
-              data-item-url={`/products/${slug}`}
-              data-item-description={desc}
-              data-item-image={image.childImageSharp.fluid.src}
-              data-item-name={title}
-            >
+            <button className="btn-primary" onClick={() => addItem(product)}>
               Add to cart
             </button>
           </div>

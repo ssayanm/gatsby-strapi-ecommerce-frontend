@@ -46,8 +46,8 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        collections: state.collections,
-        directory: state.directory,
+        // collections: state.collections,
+        // directory: state.directory,
         cartItems: state.cartItems,
         hidden: state.hidden,
         // cartTotal: state.cartTotal,

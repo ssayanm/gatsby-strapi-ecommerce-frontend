@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
+import { GlobalContext } from "../context/GlobalState"
 
 const ShopTemplate = ({ data }) => {
+  const { addItem } = useContext(GlobalContext)
   const { id, content, title, desc, price, image } = data.product
   return (
     <Layout>
@@ -22,30 +24,13 @@ const ShopTemplate = ({ data }) => {
               <ReactMarkdown source={content} />
             </article>
             <button
-              className="snipcart-add-item btn-primary"
-              data-item-id={id}
-              data-item-price={price}
-              data-item-url="/"
-              data-item-description={desc}
-              data-item-image={image.childImageSharp.fluid.src}
-              data-item-name={title}
+              className="btn-primary"
+              onClick={() => addItem(data.product)}
             >
               Add to cart
             </button>
           </div>
         </div>
-        {/*
-        <article className="blog">
-          <div className="image-box"></div>
-
-          <div className="blog-card">
-            <h4>{title}</h4>
-            <p>{content}</p>
-            <div className="blog-footer">
-              <p>${price}</p>
-            </div>
-          </div>
-        </article>*/}
       </section>
     </Layout>
   )
