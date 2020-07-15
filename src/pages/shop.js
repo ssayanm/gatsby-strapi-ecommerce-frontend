@@ -3,10 +3,9 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Products from "../components/Products"
 import SEO from "../components/SEO"
-import { GlobalContext } from "../../provider.js"
+// import { GlobalContext } from "../../provider.js"
 
 const Shop = ({
-  match,
   data: {
     allStrapiProducts: { nodes: products },
   },

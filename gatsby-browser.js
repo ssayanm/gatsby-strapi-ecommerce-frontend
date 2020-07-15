@@ -1,4 +1,4 @@
 import "./src/scss/style.scss"
-import Provider from "./provider"
+import GlobalProvider from "./src/context/GlobalState"
 
-export const wrapRootElement = Provider
+export const wrapRootElement = GlobalProvider
