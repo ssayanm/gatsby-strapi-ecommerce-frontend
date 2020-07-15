@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import CartIconComponent from "../components/CartIconComponent"
+import CartDropDownComponent from "../components/CartDropDownComponent"
 import { MdHome } from "react-icons/md"
+import { GlobalContext } from "../context/GlobalState"
+
 const data = [
   {
     id: 1,
@@ -38,12 +41,14 @@ const tempLinks = data.map(link => {
 // I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
+  const { hidden } = useContext(GlobalContext)
   return (
     <div className="navi-menu">
       <ul className={`page-links ${styleClass ? styleClass : ""}`}>
         {tempLinks}
       </ul>
       <CartIconComponent />
+      {hidden ? null : <CartDropDownComponent />}
     </div>
   )
 }

@@ -13,7 +13,6 @@ const CartIconComponent = () => {
   return (
     <div className="cart-icon" onClick={toggleCartHidden}>
       <img src={publicURL} alt="logoicon" />
-
       <span className="count"> {getCartItemsCount(cartItems)}</span>
     </div>
   )
