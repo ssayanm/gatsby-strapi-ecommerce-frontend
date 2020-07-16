@@ -31,13 +31,4 @@ const Product = ({ product }) => {
   )
 }
 
-Product.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  desc: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
-}
-
 export default Product

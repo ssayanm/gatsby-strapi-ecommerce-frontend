@@ -3,11 +3,12 @@ import React, { useContext } from "react"
 import { GlobalContext } from "../context/GlobalState"
 import CartItemComponent from "./CartItemComponent"
 
-const CartDropDownComponent = ({ history }) => {
+import { navigate } from "gatsby"
+
+const CartDropDownComponent = () => {
   const { cartItems, toggleCartHidden } = useContext(GlobalContext)
   return (
     <div className="cart-dropdown">
-      {console.log(history)}
       <div className="cart-items">
         {cartItems.length ? (
           cartItems.map(cartItem => (
@@ -20,7 +21,7 @@ const CartDropDownComponent = ({ history }) => {
       <button
         className="btn-primary"
         onClick={() => {
-          history.push("/checkout")
+          navigate("/checkout")
           toggleCartHidden()
         }}
       >

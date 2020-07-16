@@ -8,7 +8,7 @@ import { GlobalContext } from "../context/GlobalState"
 
 const ShopTemplate = ({ data }) => {
   const { addItem } = useContext(GlobalContext)
-  const { content, title, desc, price, image } = data.product
+  const { id, content, title, desc, price, image } = data.product
   return (
     <Layout>
       <SEO title={title} description={desc} />

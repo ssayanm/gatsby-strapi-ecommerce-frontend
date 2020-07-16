@@ -1,15 +1,16 @@
 import React, { useContext } from "react"
 import { GlobalContext } from "../context/GlobalState"
+import Image from "gatsby-image"
 
 const CheckoutItemComponent = ({ cartItem }) => {
-  const { name, price, imageUrl, quantity } = cartItem
+  const { title, price, image, quantity } = cartItem
   const { addItem, removeItem, clearItemFromCart } = useContext(GlobalContext)
   return (
     <div className="checkout-item">
       <div className="image-container">
-        <img src={imageUrl} alt="item" />
+        <Image fluid={image.childImageSharp.fluid} className="cart-img" />
       </div>
-      <span className="name">{name}</span>
+      <span className="name">{title}</span>
       <span className="quantity">
         <div className="arrow" onClick={() => removeItem(cartItem)}>
           &#10094;
