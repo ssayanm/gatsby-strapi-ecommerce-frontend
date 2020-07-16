@@ -7,6 +7,7 @@ const CartDropDownComponent = ({ history }) => {
   const { cartItems, toggleCartHidden } = useContext(GlobalContext)
   return (
     <div className="cart-dropdown">
+      {console.log(history)}
       <div className="cart-items">
         {cartItems.length ? (
           cartItems.map(cartItem => (
