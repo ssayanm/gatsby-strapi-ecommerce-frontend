@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Sayan Mukherjee <hello@sayanmukherjee.com>",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.8.0",
     "gatsby": "^2.23.22",
     "gatsby-background-image": "^1.1.1",
@@ -27,6 +28,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-markdown": "^4.3.1",
+    "react-paypal-button-v2": "^2.6.2",
     "react-stripe-checkout": "^2.6.3"
   },
   "devDependencies": {
