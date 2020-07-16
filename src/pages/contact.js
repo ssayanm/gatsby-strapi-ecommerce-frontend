@@ -1,9 +1,8 @@
-import React from "react";
-import Layout from "../components/Layout";
-import Title from "../components/Title";
-import SEO from "../components/SEO";
-
-import { FaMobileAlt, FaEnvelope } from "react-icons/fa";
+import React from "react"
+import Layout from "../components/Layout"
+import Title from "../components/Title"
+import SEO from "../components/SEO"
+import { FaMobileAlt, FaEnvelope } from "react-icons/fa"
 
 const contact = () => {
   return (
@@ -68,7 +67,7 @@ const contact = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default contact;
+export default contact
