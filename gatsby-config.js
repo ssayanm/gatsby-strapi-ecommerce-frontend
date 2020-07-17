@@ -55,7 +55,14 @@ module.exports = {
         contentTypes: [`products`, `sliders`, `pricelists`],
       },
     },
-
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Price"],
+        secretKey: process.env.GATSBY_STRIPE_SKEY,
+        downloadFiles: false,
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
