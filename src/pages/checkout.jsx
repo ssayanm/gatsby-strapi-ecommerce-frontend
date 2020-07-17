@@ -3,6 +3,7 @@ import { GlobalContext } from "../context/GlobalState"
 import { getCartTotal } from "../utils/cartUtils"
 import CheckoutItemComponent from "../components/CheckoutItemComponent"
 import StripeCheckoutButton from "../components/StripeCheckoutButtonComponent"
+import PayPalCheckoutButton from "../components/PayPalCheckoutButton"
 import Layout from "../components/Layout"
 import Title from "../components/Title"
 import SEO from "../components/SEO"
@@ -42,6 +43,7 @@ const CheckoutPage = () => {
             4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
           </div>
           <StripeCheckoutButton price={getCartTotal(cartItems)} />
+          <PayPalCheckoutButton price={getCartTotal(cartItems)} />
         </div>
       </section>
     </Layout>
