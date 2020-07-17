@@ -1,16 +1,9 @@
 import React from "react"
+import Title from "../Title"
 import { graphql, StaticQuery } from "gatsby"
 import ProductCard from "./ProductCard"
 
-const containerStyles = {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  padding: "1rem 0 1rem 0",
-}
-
-const Products = () => {
+const Products = ({ title }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -49,11 +42,14 @@ const Products = () => {
         }
 
         return (
-          <div style={containerStyles}>
-            {Object.keys(products).map(key => (
-              <ProductCard key={products[key].id} product={products[key]} />
-            ))}
-          </div>
+          <section className="section">
+            <Title title={title} />
+            <div className="section-center stripe-box">
+              {Object.keys(products).map(key => (
+                <ProductCard key={products[key].id} product={products[key]} />
+              ))}
+            </div>
+          </section>
         )
       }}
     />

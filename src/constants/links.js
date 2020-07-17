@@ -24,6 +24,11 @@ const data = [
   },
   {
     id: 4,
+    text: "Stripe shop",
+    url: "/advanced",
+  },
+  {
+    id: 5,
     text: "contact us",
     url: "/contact/",
   },

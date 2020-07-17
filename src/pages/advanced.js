@@ -8,10 +8,10 @@ import Products from "../components/Products/Products"
 
 const AdvancedExamplePage = () => (
   <Layout>
-    <SEO title="Advanced Example" />
-    <h1>This is the advanced example</h1>
-    <Products />
-    <Link to="/">Go back to the first example</Link>
+    <SEO title="Shop" description="We are All about Car Care" />
+    <section className="shop-page">
+      <Products title="our shop" />
+    </section>
   </Layout>
 )
 
