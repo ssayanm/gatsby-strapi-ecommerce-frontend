@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import Instapics from "../components/Instapics";
-import SEO from "../components/SEO";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import Services from "../components/Services"
+import Instapics from "../components/Instapics"
+import SEO from "../components/SEO"
 
 export default ({ data: { allInstaNode } }) => {
   return (
@@ -14,8 +14,8 @@ export default ({ data: { allInstaNode } }) => {
       <Services />
       <Instapics instapics={allInstaNode} showLink />
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   {
@@ -37,4 +37,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
